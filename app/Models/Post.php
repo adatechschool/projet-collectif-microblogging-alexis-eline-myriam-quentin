@@ -24,4 +24,8 @@ class Post extends Model
         'is_featured',
         'is_published'
     ];
+    public function user()
+    {
+    return $this->belongsTo('app\Models\User');
+    }
 }
