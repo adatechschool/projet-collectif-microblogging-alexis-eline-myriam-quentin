@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Post;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -9,15 +10,16 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class PostFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
-    public function definition(): array
+    protected $model = Post::class;
+    public function definition()
     {
         return [
-            //
+            'user_id' => fake()->numberBetween(1, 10),
+            'title' => fake()->sentence(2),
+            'content' => fake()->sentence(15),
+            'featured_image' => fake()->imageUrl(640, 480, 'cats'),
+            'is_featured' => fake()->boolean(),
+            'is_published' => fake()->boolean(),
         ];
     }
 }
