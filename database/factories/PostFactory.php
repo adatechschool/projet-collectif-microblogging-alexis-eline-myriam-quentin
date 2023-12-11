@@ -3,7 +3,9 @@
 namespace Database\Factories;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Post>
@@ -14,7 +16,7 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => fake()->numberBetween(1, 10),
+            'user_id' => fake()->numberBetween(1,10),
             'title' => fake()->sentence(2),
             'content' => fake()->sentence(15),
             'featured_image' => fake()->imageUrl(640, 480, 'cats'),
