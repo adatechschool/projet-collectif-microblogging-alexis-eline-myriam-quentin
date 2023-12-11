@@ -12,4 +12,9 @@ class PostController extends Controller
         //on accède à la variable $posts qu'on nomme ici "posts" pour la transmettre à la view blade
         return view("posts.index", ["posts"=>$posts]);    
     }
+
+    public function getOnePost($id){
+        $post = Post::find($id);
+        return view("posts.singlePost", ["post"=>$post]);
+    }
 }
