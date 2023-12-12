@@ -31,14 +31,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 //création de la route pour afficher la page /posts, le contenu s'affiche grâce à la fonction getAllPosts
+Route::middleware('auth')->group(function () {
 Route::get('/posts', [PostController::class, 'getAllPosts']);
 // Création de la route pour afficher la page /posts/{id}, le contenu s'affiche grâce à la fonction getOnePost
 Route::get('/posts/{id}', [PostController::class, 'getOnePost']);
+Route::get('/dashboard', [PostController::class, 'getPostByUser'])->name('dashboard');
+});
 
-
+Route::middleware('auth')->group(function () {
 //création de la route pour afficher la page /posts, le contenu s'affiche grâce à la fonction getAllPosts
 Route::get('/users', [UserController::class, 'getAllUsers']);
 // Création de la route pour afficher la page /posts/{id}, le contenu s'affiche grâce à la fonction getOnePost
 Route::get('/users/{id}', [UserController::class, 'getOneUser']);
+});
 
 require __DIR__ . '/auth.php';
