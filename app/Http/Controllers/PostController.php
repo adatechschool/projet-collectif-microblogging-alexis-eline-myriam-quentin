@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -28,5 +29,10 @@ class PostController extends Controller
     }
     public function createPost(){
         return view("posts.newPost");
+    }
+
+    public function getPostByUser(){
+        $posts = Post::find(Auth::user()->posts);
+        return view("dashboard", ["posts"=>$posts]);
     }
 }
