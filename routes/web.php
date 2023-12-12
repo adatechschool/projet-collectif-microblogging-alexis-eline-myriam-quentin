@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
+
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,4 +35,10 @@ Route::get('/posts', [PostController::class, 'getAllPosts']);
 // Création de la route pour afficher la page /posts/{id}, le contenu s'affiche grâce à la fonction getOnePost
 Route::get('/posts/{id}', [PostController::class, 'getOnePost']);
 
-require __DIR__.'/auth.php';
+
+//création de la route pour afficher la page /posts, le contenu s'affiche grâce à la fonction getAllPosts
+Route::get('/users', [UserController::class, 'getAllUsers']);
+// Création de la route pour afficher la page /posts/{id}, le contenu s'affiche grâce à la fonction getOnePost
+Route::get('/users/{id}', [UserController::class, 'getOneUser']);
+
+require __DIR__ . '/auth.php';
