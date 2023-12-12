@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -26,5 +27,9 @@ class PostController extends Controller
             'content' => $request->input("content"),
         ]);
         return redirect('/posts')->with('success', 'Post created successfully.');
+    }
+    public function getPostByUser(){
+        $posts = Post::find(Auth::user()->posts);
+        return view("dashboard", ["posts"=>$posts]);
     }
 }
