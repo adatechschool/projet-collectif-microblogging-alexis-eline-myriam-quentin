@@ -36,7 +36,7 @@ Route::middleware('auth')->group(function () {
 Route::get('/posts', [PostController::class, 'getAllPosts']);
 // Création de la route pour afficher la page /posts/{id}, le contenu s'affiche grâce à la fonction getOnePost
 
-// Route::get('/posts/{id}', [PostController::class, 'getOnePost']);
+Route::get('/posts/{id}', [PostController::class, 'getOnePost']);
 // Création de la route pour afficher la page /posts/createPost, le contenu s'affiche grâce à la fonction createPost
 Route::post('/posts/newpost', [PostController::class, 'store']);
 Route::get('/posts/newpost', [PostController::class, 'createPost']);
@@ -56,7 +56,7 @@ Route::get('/users/{id}', [UserController::class, 'getOneUser']);
 
 
 // test // 
-Route::redirect('/', '/posts');
+// Route::redirect('/', '/posts');
 
 
 Route::name('/posts')->controller(PostController::class)->middleware(['auth', 'verified'])->group(function () {

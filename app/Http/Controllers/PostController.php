@@ -14,10 +14,10 @@ class PostController extends Controller
         return view("posts.index", ["posts"=>$posts]);    
     }
 
-    // public function getOnePost($id){
-    //     $post = Post::find($id);
-    //     return view("posts.singlePost", ["post"=>$post]);
-    // }
+    public function getOnePost($id){
+        $post = Post::find($id);
+        return view("posts.singlePost", ["post"=>$post]);
+    }
     public function createPost(){
         return view("posts/newPost");
     }
