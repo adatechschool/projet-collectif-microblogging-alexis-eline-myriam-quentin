@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
 </head>
+<x-app-layout>
 <body>
     <section class="text-gray-600 body-font">
         <div class="md:container px-5 py-5 md:mx-auto">
@@ -65,4 +66,5 @@
 </div>
 </section>
 </body>
+</x-app-layout>
 </html>
