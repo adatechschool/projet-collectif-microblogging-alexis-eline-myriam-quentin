@@ -54,4 +54,13 @@ Route::get('/users', [UserController::class, 'getAllUsers']);
 Route::get('/users/{id}', [UserController::class, 'getOneUser']);
 });
 
+
+// test // 
+Route::redirect('/', '/posts');
+
+
+Route::name('/posts')->controller(PostController::class)->middleware(['auth', 'verified'])->group(function () {
+    Route::get('/newpost', [PostController::class, "createPost"])->middleware(['auth', 'verified'])->name('createPost');
+    Route::post('/newpost', [PostController::class, "store"])->middleware(['auth', 'verified'])->name('store');
+});
 require __DIR__ . '/auth.php';
