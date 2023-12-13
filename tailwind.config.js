@@ -13,9 +13,14 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                'monoton': ['Monoton'],
+                'abril-fatface': ['abril-fatface'],
             },
+            // backgroundImage: {
+            //     'profile': "url('https://cdn.pixabay.com/photo/2016/11/09/23/16/music-1813100_1280.png')",
+            //    },
         },
     },
-
+    variants: {},
     plugins: [forms],
 };
