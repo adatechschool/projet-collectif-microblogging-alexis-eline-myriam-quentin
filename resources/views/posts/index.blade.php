@@ -10,13 +10,15 @@ La syntaxe '-> User -> name' permet de récupérer le nom du user grâce à la r
 
 
 <!-- component -->
-<html lang="en">
+{{-- <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
-</head>
+</head> --}}
+
+<x-app-layout>
 <body>
     <section class="text-gray-600 body-font">
         <div class="md:container px-5 py-5 md:mx-auto">
@@ -47,7 +49,7 @@ La syntaxe '-> User -> name' permet de récupérer le nom du user grâce à la r
         <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">{{$post -> title}}</h2>
         <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{$post -> content}}</h1>
         <div class="flex items-center flex-wrap ">
-          <a href="/" class="text-green-800  md:mb-2 lg:mb-0">
+          <a href="/posts/{{$post -> id}}" class="text-green-800  md:mb-2 lg:mb-0">
             <p class="inline-flex items-center">Read post
               <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 12h14"></path>
@@ -177,5 +179,6 @@ La syntaxe '-> User -> name' permet de récupérer le nom du user grâce à la r
         </div>
       </section>
 </body>
+</x-app-layout>
 </html>
 
