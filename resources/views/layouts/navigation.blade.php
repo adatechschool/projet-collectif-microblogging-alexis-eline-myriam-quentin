@@ -12,6 +12,13 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('getAllPosts')">
+                        {{ __('All posts') }}
+                    </x-nav-link>
+                    {{-- ! route pour ajouter un nouveau post ne fonctionne pas, à revoir --}}
+                    <x-nav-link :href="route('getAllPosts')">
+                        {{ __('Add a new post') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>

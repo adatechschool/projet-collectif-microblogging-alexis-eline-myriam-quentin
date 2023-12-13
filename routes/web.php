@@ -33,7 +33,7 @@ Route::middleware('auth')->group(function () {
 });
 //création de la route pour afficher la page /posts, le contenu s'affiche grâce à la fonction getAllPosts
 Route::middleware('auth')->group(function () {
-    Route::get('/posts', [PostController::class, 'getAllPosts']);
+    Route::get('/posts', [PostController::class, 'getAllPosts'])->name('getAllPosts');
     // Création de la route pour afficher la page /posts/{id}, le contenu s'affiche grâce à la fonction getOnePost
 
     Route::get('/posts/{id}', [PostController::class, 'getOnePost']);
