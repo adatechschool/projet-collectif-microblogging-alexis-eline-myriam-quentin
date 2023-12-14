@@ -32,7 +32,7 @@
       <img class="h-48 w-48 object-cover object-center"  src={{$post -> featured_image}} alt="album cover"/>
       
       <div class="p-4">
-        <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">{{$post -> title}}</h2>
+        <h2 class="tracking-widest text-L title-font font-medium text-grey-400 mb-1 uppercase ">{{$post -> title}}</h2>
         <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{$post -> content}}</h1>
         <div class="flex items-center flex-wrap ">
           <a href="/" class="text-green-800  md:mb-2 lg:mb-0">

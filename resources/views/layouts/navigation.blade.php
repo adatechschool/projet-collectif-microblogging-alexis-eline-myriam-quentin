@@ -16,7 +16,7 @@
                         {{ __('All posts') }}
                     </x-nav-link>
                     {{-- ! route pour ajouter un nouveau post ne fonctionne pas, à revoir --}}
-                    <x-nav-link :href="route('getAllPosts')">
+                    <x-nav-link href="/newpost">
                         {{ __('Add a new post') }}
                     </x-nav-link>
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
