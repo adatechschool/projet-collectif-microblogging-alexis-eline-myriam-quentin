@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 
 //vieille fonction :
@@ -56,7 +56,7 @@ Route::middleware('auth')->group(function () {
 
 
 // test // 
-// Route::redirect('/', '/posts');
+Route::redirect('/', '/posts');
 
 
 Route::name('/posts')->controller(PostController::class)->middleware(['auth', 'verified'])->group(function () {
