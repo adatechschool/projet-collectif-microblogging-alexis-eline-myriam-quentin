@@ -43,7 +43,7 @@ La syntaxe '-> User -> name' permet de récupérer le nom du user grâce à la r
         </div>
         
       
-      <img class="h-48 w-48 object-cover object-center"  src="https://f4.bcbits.com/img/a4237845037_10.jpg" alt="blog cover"/>
+      <img class="h-48 w-48 object-cover object-center"  src={{$post -> featured_image}} alt="album cover"/>
       
       <div class="p-4">
         <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">{{$post -> title}}</h2>

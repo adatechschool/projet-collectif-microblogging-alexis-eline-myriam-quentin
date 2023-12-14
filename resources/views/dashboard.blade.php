@@ -39,12 +39,12 @@
         @foreach ($posts as $post)
 
 <div class="p-4 md:w-1/3" >
-    <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+    <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden background-color-white">
         <div class="w-full">
             <div class="w-full flex p-2">
                 <div class="p-2 ">
                   <img 
-                    src="https://cdn.pixabay.com/photo/2016/11/09/23/16/music-1813100_1280.png" alt="author" 
+                    src="https://cdn.pixabay.com/photo/2016/11/09/23/16/music-1813100_1280.png" alt="user avatar" 
                     class="w-10 h-10 rounded-full overflow-hidden"/>
                 </div>
                 <div class="pl-2 pt-2 ">
@@ -55,7 +55,7 @@
         </div>
         
       
-      <img class="h-48 w-48 object-cover object-center"  src="https://f4.bcbits.com/img/a4237845037_10.jpg" alt="blog cover"/>
+      <img class="h-48 w-48 object-cover object-center"  src={{$post -> featured_image}} alt="album cover"/>
       
       <div class="p-4">
         <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">{{$post -> title}}</h2>

@@ -19,8 +19,16 @@
         @csrf
         <input type="hidden" name="user_id" value="{{auth() -> id()}}">
         <div class="form-group">
+            <label for="exampleFormControlTextarea1">Title</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="title"></textarea>
+        </div>
+        <div class="form-group">
             <label for="exampleFormControlTextarea1">Description</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Picture</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="featured_image"></textarea>
         </div>
     
         <x-primary-button type="submit" class="btn btn-primary">New Post</x-primary-button>
