@@ -1,22 +1,22 @@
 <x-app-layout>
     <div class="bg-gradient-to-r from-purple-500  to-yellow-200">
         <x-slot name="header">
-            <h2 class="font-monoton text-xl text-gray-800 leading-tight">
+            <h2 class="font-monoton text-gray-800 leading-tight text-9x1">
                 {{ __('Dashboard') }}
             </h2>
         </x-slot>
 
-        <div class="py-12">
-            <div class="grid grid-cols-2 gap-4">
-                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="py-10 px-10">
+            <div class="grid grid-cols-2 gap-2">
+                <div class="mx-auto sm:px-6 lg:px-8">
                     {{-- <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg"> --}}
-                        <div class="font-abril-fatface p-6 text-gray-900">
+                        <div class="font-abril-fatface p-6 text-gray-900 text-lg">
                             {{ __('Welcome,') }}
                             {{ Auth::user()->name }}
                         </div>
                     {{-- </div> --}}
                 </div>
-                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 bg-no-repeat bg-contain bg-center" style="background-image: url(https://cdn.pixabay.com/photo/2016/11/09/23/16/music-1813100_1280.png)">
+                <div class="w-72 h-72 mx-auto sm:px-6 lg:px-8 bg-no-repeat bg-contain bg-center" style="background-image: url(https://cdn.pixabay.com/photo/2016/11/09/23/16/music-1813100_1280.png)">
                 </div>
             </div>
         </div>
