@@ -1,23 +1,19 @@
 <x-app-layout>
     <div class="bg-gradient-to-r from-purple-500  to-yellow-200">
         <x-slot name="header">
-            <h2 class="font-monoton text-gray-800 leading-tight text-9x1">
+            <h2 class="font-monoton font-medium text-red-500 leading-tight text-4xl">
                 {{ __('Dashboard') }}
             </h2>
         </x-slot>
 
-        <div class="py-10 px-10">
-            <div class="grid grid-cols-2 gap-2">
-                <div class="mx-auto sm:px-6 lg:px-8">
-                    {{-- <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg"> --}}
-                        <div class="font-abril-fatface p-6 text-gray-900 text-lg">
-                            {{ __('Welcome,') }}
-                            {{ Auth::user()->name }}
-                        </div>
-                    {{-- </div> --}}
-                </div>
-                <div class="w-72 h-72 mx-auto sm:px-6 lg:px-8 bg-no-repeat bg-contain bg-center" style="background-image: url(https://cdn.pixabay.com/photo/2016/11/09/23/16/music-1813100_1280.png)">
-                </div>
+        <div class="py-10 px-10 items-center grid grid-cols-2 gap-2">
+            <div class="mx-auto sm:px-6 lg:px-8 font-bold font-abril-fatface p-6 text-yellow-200 text-3xl">
+                {{ __('Welcome,') }}
+                {{ Auth::user()->name }}
+            </div>
+            <div class="bg-gray-200 rounded-full h-80 w-80 flex items-center justify-center">
+              <div class="w-72 h-72 mx-auto sm:px-6 lg:px-8 bg-no-repeat bg-contain bg-center" style="background-image: url(https://cdn.pixabay.com/photo/2016/11/09/23/16/music-1813100_1280.png)">
+              </div>
             </div>
         </div>
 
