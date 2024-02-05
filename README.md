@@ -1,6 +1,34 @@
-# Plateforme de micro-blogging
+# <p align="center">Microblogging : Musicat </p>
 
-## [Windows] Pré-requis : installer WSL 2
+Objectif du projet : créer un réseau social pour partager des photos au sein d'une communauté fan de chats et musiques 
+
+## Organisation de travail
+- Agile - Scrum
+- Journaux de bord
+- MOB programming et pair programming
+
+## Fonctionnalités 
+- Création de compte pour un user
+- Page de connexion et déconnexion 
+- Page de profil
+- Créer des posts
+
+## 🛠️ Tech Stack
+- Docker
+- PHP  (version 8.x)
+- Laravel (version 10.x)
+- PostgreSQL
+- PHPUnit
+
+![image](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white 
+) ![image](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white) ![image](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white) ![image](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white) ![image](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+
+## Mes missions pendant ce projet   
+⚠️A COMPLETER INDIVIDUELLEMENT 
+
+## Configuration
+
+#### [Windows] Pré-requis : installer WSL 2
 
 🟡 Si vous ne l'avez toujours pas fait, installez WSL 2. Voir la [doc officielle de WSL 2](https://learn.microsoft.com/fr-fr/windows/wsl/install).
 
@@ -16,8 +44,9 @@ Pourquoi ?
 
 Sur le site officiel de WSL, vous trouverez plus d'infos sur le [Stockage de fichiers et performances dans les systèmes de fichiers](https://learn.microsoft.com/fr-fr/windows/wsl/filesystems#file-storage-and-performance-across-file-systems).
 
+## Première installation sur votre machine
 
-##  [Windows / Mac / Linux] Pré-requis : installer Docker 
+###  [Windows / Mac / Linux] Pré-requis : installer Docker 
 
 🟡 Installer Docker via le [site officiel de Docker](https://docs.docker.com/get-docker/).
 
@@ -32,7 +61,7 @@ docker info
 ```
 
 
-## [Windows] Pré-requis : cloner le projet 🚩sur le système de fichiers Linux (WSL)🚩
+### [Windows] Pré-requis : cloner le projet 🚩sur le système de fichiers Linux (WSL)🚩
 
 🟡 Si vous avez cloné ce template projet microblogging directement sur le filesystem WSL, bravo vous avez bien suivi le premier pré-requis, vous pouvez passer à l'étape suivante 🎉
 
@@ -54,7 +83,7 @@ Si ce template projet se trouve sur votre système de fichiers Windows, clonez-l
 - Si vous êtes bien sur le système de fichiers WSL, c'est bon, créez ou allez dans votre répertoire projet, puis clonez le projet de manière classique.
   
 
-##  [Windows / Mac / Linux] Pré-requis : configurer l'environnement de développement du projet
+###  [Windows / Mac / Linux] Pré-requis : configurer l'environnement de développement du projet
 
 Ce projet a été pré-configuré pour vous permettre une installation rapide et automatique de toutes ses dépendances (outils de ligne de commandes PHP, Laravel et ses librairies, des extensions VSCode adaptées au développement PHP). Pour cela on va utiliser la fonctionnalité de ["Dev Containers" de VSCode](https://code.visualstudio.com/docs/devcontainers/containers).
 
@@ -91,7 +120,7 @@ Le projet s'ouvre normalement dans une nouvelle fenêtre VSCode, et démarre le 
 ❓ Observez également les extensions VSCode installées. D'où viennent ces extensions PHP / Laravel ?
 
 
-## Démarrer l'application Laravel
+### Démarrer l'application Laravel
 
 🟡 Ouvrir le terminal de VSCode.
 
@@ -134,11 +163,9 @@ Vous devriez voir la page par défaut de Laravel en ouvrant l'url indiquée (htt
 À ce stade, prenez le temps de vous familiariser avec le fonctionnement de Laravel, en parcourant la doc officielle (fortement recommandé) ou en suivant quelques tutos. Voir les liens à la fin de ce README.
 
 
-## Gestion de la base de données (PostgreSQL)
+### Gestion de la base de données (PostgreSQL)
 
-🟡 Accéder à l'interface d'admin "pgAdmin"
-
-❓ En inspectant le `docker-compose.yml` (et éventuellement le `.env`) pouvez-vous en déduire l'url de connexion à "pgAdmin", ainsi que ses identifiants de connexion ?
+🟡 Accéder à l'interface d'admin "pgAdmin" via http://localhost:5050/
 
 ---
 
@@ -159,6 +186,20 @@ php artisan migrate
 ```
 
 À ce stade, observez les tables créées dans votre base PG, et comprenez le lien avec les fichiers présents dans le dossier `database/migrations` du projet.
+
+## Lancer docker et les serveurs 
+
+###  Lancement docker
+
+* Ouvrir Docker 
+* Dans terminal, vérifier que Docker est bien lancé en tapant : docker info
+* Lancer le container en appuyant sur le bouton play 
+
+###  Lancement serveur
+
+* Ouvrir le projet dans VS code
+* Pour lancer le server back faire la cmd ```php artisan serve```
+*  lancement du serveur ‘front’ en local avec la commande ```npm run dev```
 
 
 ## À propos de Laravel
@@ -184,3 +225,15 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+
+## 🙇 Auteurices 
+
+Alexis Chentre, Quentin Kerzelec, Myriam Le Nahelec, Eline Longépée
+        
+## Visuels du réseau social
+![Alt text](/z_screenshots/1-login.png "accueil")
+![Alt text](/z_screenshots/2-allposts.png "all posts")
+![Alt text](/z_screenshots/3-addposts.png "ajout post")
+![Alt text](/z_screenshots/4-userprofile.png "user profile")
+
+
