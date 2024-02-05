@@ -24,7 +24,7 @@ Objectif du projet : créer un réseau social pour partager des photos au sein d
 ) ![image](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white) ![image](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white) ![image](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white) ![image](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 
 ## Mes missions pendant ce projet   
-
+⚠️A COMPLETER INDIVIDUELLEMENT 
 
 ## Configuration
 
@@ -189,13 +189,13 @@ php artisan migrate
 
 ## Lancer docker et les serveurs 
 
-#  Lancement docker
+###  Lancement docker
 
 * Ouvrir Docker 
 * Dans terminal, vérifier que Docker est bien lancé en tapant : docker info
 * Lancer le container en appuyant sur le bouton play 
 
-#  Lancement serveur
+###  Lancement serveur
 
 * Ouvrir le projet dans VS code
 * Pour lancer le server back faire la cmd ```php artisan serve```
@@ -233,7 +233,7 @@ Alexis Chentre, Quentin Kerzelec, Myriam Le Nahelec, Eline Longépée
 ## Visuels du réseau social
 ![Alt text](/z_screenshots/1-login.png "accueil")
 ![Alt text](/z_screenshots/2-allposts.png "all posts")
-![Alt text](/z_screenshots/3-addpost.png "ajout post")
+![Alt text](/z_screenshots/3-addposts.png "ajout post")
 ![Alt text](/z_screenshots/4-userprofile.png "user profile")
 
 
