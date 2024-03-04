@@ -2,7 +2,7 @@
     <div >
         <x-slot name="header">
             <h2 class=" text-xl text-gray-800 leading-tight">
-                {{ __('Dashboard') }}
+                {{ __('Hey ! This is your profile') }}
             </h2>
         </x-slot>
 

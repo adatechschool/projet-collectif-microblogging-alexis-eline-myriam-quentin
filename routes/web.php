@@ -21,16 +21,12 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
-//vieille fonction :
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
 //création de la route pour afficher la page /posts, le contenu s'affiche grâce à la fonction getAllPosts
 Route::middleware('auth')->group(function () {
     Route::get('/posts', [PostController::class, 'getAllPosts'])->name('getAllPosts');
@@ -39,7 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/posts/{id}', [PostController::class, 'getOnePost']);
     // Création de la route pour afficher la page /posts/createPost, le contenu s'affiche grâce à la fonction createPost
     Route::post('/posts/newpost', [PostController::class, 'store']);
-    Route::get('/posts/newpost', [PostController::class, 'createPost']);
+    Route::get('/posts/newpost', [PostController::class, 'createPost'])->name('createPost');
 
 
     Route::get('/posts/{id}', [PostController::class, 'getOnePost']);

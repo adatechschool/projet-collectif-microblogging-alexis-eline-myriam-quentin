@@ -12,11 +12,10 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('getAllPosts')">
+                    <x-nav-link :href="route('getAllPosts')" :active="request()->routeIs('getAllPosts')">
                         {{ __('All posts') }}
                     </x-nav-link>
-                    {{-- ! route pour ajouter un nouveau post ne fonctionne pas, à revoir --}}
-                    <x-nav-link href="/newpost">
+                    <x-nav-link href="route('createPost')" :active="request()->routeIs('createPost')">
                         {{ __('Add a new post') }}
                     </x-nav-link>
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
@@ -42,7 +41,7 @@
 
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
+                            {{ __('Account settings') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
@@ -88,7 +87,7 @@
 
             <div class="mt-3 space-y-1">
                 <x-responsive-nav-link :href="route('profile.edit')">
-                    {{ __('Profile') }}
+                    {{ __('Account settings') }}
                 </x-responsive-nav-link>
 
                 <!-- Authentication -->
