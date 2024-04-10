@@ -40,14 +40,13 @@ Route::middleware('auth')->group(function () {
     Route::post('/newpost', [PostController::class, "store"])->middleware(['auth', 'verified'])->name('store');
 
 
-    Route::get('/posts/{id}', [PostController::class, 'getOnePost']);
     Route::get('/dashboard', [PostController::class, 'getPostByUser'])->name('dashboard');
 });
 
 Route::middleware('auth')->group(function () {
 
     //création de la route pour afficher la page /posts, le contenu s'affiche grâce à la fonction getAllPosts
-    Route::get('/users', [UserController::class, 'getAllUsers']);
+    Route::get('/users', [UserController::class, 'getAllUsers'])->name('users');
     // Création de la route pour afficher la page /posts/{id}, le contenu s'affiche grâce à la fonction getOnePost
     Route::get('/users/{id}', [UserController::class, 'getOneUser']);
 });

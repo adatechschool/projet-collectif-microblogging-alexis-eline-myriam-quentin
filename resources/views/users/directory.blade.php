@@ -13,7 +13,7 @@
                     <h5 class="card-title d-flex justify-content-center" style="font-size: 30px; text-transform:uppercase; background: #f4f1f1; border-radius: 10px">{{$user -> name}}</h5>
                     <p class="card-text d-flex justify-content-center" style="text-align: justify; padding-top: 10px">{{$user -> biography}}</p>
                     </div>
-                    <a href="{{ route('dashboard') }}" class="btn btn-secondary">Go somewhere</a>
+                    <a href="/users/{{$user -> id}}" class="btn btn-secondary">Go to this profile</a>
                 </div>
             </div>
         @endforeach
