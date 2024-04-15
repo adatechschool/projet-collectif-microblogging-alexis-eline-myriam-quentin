@@ -36,7 +36,9 @@ La syntaxe '-> User -> name' permet de récupérer le nom du user grâce à la r
                     class="w-10 h-10 rounded-full overflow-hidden"/>
                 </div>
                 <div class="pl-2 pt-2 ">
+                  <a href="/users/{{$post -> User -> id}}" class="text-green-800  md:mb-2 lg:mb-0">
                   <p class="font-bold">{{$post -> User -> name}}</p>
+                  </a>
                   <p class="text-xs">{{$post -> created_at}}</p>
                 </div>
               </div>
@@ -47,7 +49,6 @@ La syntaxe '-> User -> name' permet de récupérer le nom du user grâce à la r
       
       <div class="p-4">
         <h2 class="tracking-widest text-L title-font font-medium text-grey-400 mb-1 uppercase ">{{$post -> title}}</h2>
-        <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{$post -> content}}</h1>
         <div class="flex items-center flex-wrap ">
           <a href="/posts/{{$post -> id}}" class="text-green-800  md:mb-2 lg:mb-0">
             <p class="inline-flex items-center">Read post
