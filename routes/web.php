@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CommentController;
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -34,11 +35,11 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/posts/{id}', [PostController::class, 'getOnePost']);
     // Création de la route pour afficher la page /posts/createPost, le contenu s'affiche grâce à la fonction createPost
-    // Route::post('/posts/newpost', [PostController::class, 'store']);
-    // Route::get('/posts/newpost', [PostController::class, 'createPost'])->name('createPost');
     Route::get('/newpost', [PostController::class, "createPost"])->middleware(['auth', 'verified'])->name('createPost');
     Route::post('/newpost', [PostController::class, "store"])->middleware(['auth', 'verified'])->name('store');
 
+    Route::get('/comments/', [CommentController::class, 'getAllComments']);
+    // Route::resource('comments', 'CommentController');
 
     Route::get('/dashboard', [PostController::class, 'getPostByUser'])->name('dashboard');
 });
@@ -52,8 +53,6 @@ Route::middleware('auth')->group(function () {
 });
 
 
-// test // 
 Route::redirect('/', '/posts');
-
 
 require __DIR__ . '/auth.php';

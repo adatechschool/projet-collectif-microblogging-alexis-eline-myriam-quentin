@@ -21,6 +21,7 @@ class PostController extends Controller
         $post = Post::find($id);
         return view("posts.singlePost", ["post" => $post]);
     }
+
     public function createPost()
     {
         return view("posts/newPost");
