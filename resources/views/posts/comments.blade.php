@@ -1,4 +1,3 @@
-
 <x-app-layout>
     <body>
         <section class="text-gray-600 body-font">

@@ -38,7 +38,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/newpost', [PostController::class, "createPost"])->middleware(['auth', 'verified'])->name('createPost');
     Route::post('/newpost', [PostController::class, "store"])->middleware(['auth', 'verified'])->name('store');
 
-    Route::get('/comments/', [CommentController::class, 'getAllComments']);
+    Route::get('/comments', [CommentController::class, 'getAllComments']);
+    Route::get('/comments/{post_id}', [CommentController::class, 'getCommentsByPost']);
     // Route::resource('comments', 'CommentController');
 
     Route::get('/dashboard', [PostController::class, 'getPostByUser'])->name('dashboard');

@@ -21,6 +21,12 @@ class CommentController extends Controller
         return view("posts.singleComment", ["comments" => $comments]);
 
     }
+
+    public function getCommentsByPost()
+    {
+        $comments = Comment::where("post_id", '=', 2)->get();
+        return view("posts.comments", ["comments" => $comments]);
+    }
     /**
      * Show the form for creating a new resource.
      */
