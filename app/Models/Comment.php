@@ -13,6 +13,18 @@ class Comment extends Model
      * 
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'post_id',
+        "user_id",
+        'content',
+        'created_at',
+        'updated_at'
+    ];
 
     public function user()
     {
